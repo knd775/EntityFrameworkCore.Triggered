@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace EntityFrameworkCore.Triggered
 {
@@ -14,6 +15,8 @@ namespace EntityFrameworkCore.Triggered
         /// The entity that caused this trigger to be raised
         /// </summary>
         TEntity Entity { get; }
+
+        EntityEntry EntityEntry { get; }
 
         /// <summary>
         /// This will retain the unmodified entity in case when the ChangeType is <c>Modified</c>

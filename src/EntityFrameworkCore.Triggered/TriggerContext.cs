@@ -24,6 +24,7 @@ namespace EntityFrameworkCore.Triggered
 
         public ChangeType ChangeType => _type;
         public TEntity Entity => (TEntity)_entityEntry.Entity;
+        public EntityEntry EntityEntry => _entityEntry;
         public TEntity? UnmodifiedEntity
         {
             get
